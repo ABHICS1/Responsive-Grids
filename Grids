@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=4">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 1px;
+  background-color: black;
+}
+@media screen and (max-width: 720px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.container::before, .row::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="column">
+      <img src="image1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        </div>
+  </div>
+  <div class="column">
+      <img src="image2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+      </div>
+  </div>
+  <div class="column">
+      <img src="image3.jpg" alt="John" style="width:100%">
+      <div class="container">
+    </div>
+  </div>
+  <div class="column">
+      <img src="image4.jpg" alt="John" style="width:100%">
+      <div class="container">
+    </div>
+  </div>
+</div>
+</body>
+</html>
